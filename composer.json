@@ -35,18 +35,15 @@
     "require": {
         "php": "^7.3",
         "doctrine/collections": "^1.6",
-        "sylius/resource": "1.6.*",
+        "sylius/resource": "^1.7",
         "symfony/polyfill-mbstring": "^1.17",
-        "symfony/security": "^4.4"
+        "symfony/security-core": "^4.4 || ^5.1"
     },
     "require-dev": {
         "phpspec/phpspec": "^7.0"
     },
     "suggest": {
         "ext-mbstring": "For better performance than using Symfony Polyfill Component"
-    },
-    "config": {
-        "bin-dir": "bin"
     },
     "extra": {
         "branch-alias": {
@@ -56,19 +53,16 @@
     "autoload": {
         "psr-4": {
             "Sylius\\Component\\User\\": ""
-        }
+        },
+        "classmap": [
+            "Symfony/Component/Security/Core/User/AdvancedUserInterface.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
             "Sylius\\Component\\User\\spec\\": "spec/"
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../../*/*"
-        }
-    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }
