@@ -36,7 +36,8 @@
         "php": "^7.3",
         "doctrine/collections": "^1.6",
         "sylius/resource": "^1.7",
-        "symfony/polyfill-mbstring": "^1.17"
+        "symfony/polyfill-mbstring": "^1.17",
+        "symfony/security-core": "^4.4 || ^5.1"
     },
     "require-dev": {
         "phpspec/phpspec": "^7.0"
@@ -52,7 +53,10 @@
     "autoload": {
         "psr-4": {
             "Sylius\\Component\\User\\": ""
-        }
+        },
+        "classmap": [
+            "Symfony/Component/Security/Core/User/AdvancedUserInterface.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

@@ -62,7 +62,3 @@ jobs:
             -
                 name: Run phpspec
                 run: phpdbg -qrr vendor/bin/phpspec run --no-interaction -f dot
-
-            -
-                name: Run PHPUnit
-                run: vendor/bin/phpunit $PHPUNIT_FLAGS
