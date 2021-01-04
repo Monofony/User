@@ -35,18 +35,14 @@
     "require": {
         "php": "^7.3",
         "doctrine/collections": "^1.6",
-        "sylius/resource": "1.6.*",
-        "symfony/polyfill-mbstring": "^1.17",
-        "symfony/security": "^4.4"
+        "sylius/resource": "^1.7",
+        "symfony/polyfill-mbstring": "^1.17"
     },
     "require-dev": {
         "phpspec/phpspec": "^7.0"
     },
     "suggest": {
         "ext-mbstring": "For better performance than using Symfony Polyfill Component"
-    },
-    "config": {
-        "bin-dir": "bin"
     },
     "extra": {
         "branch-alias": {
@@ -63,12 +59,6 @@
             "Sylius\\Component\\User\\spec\\": "spec/"
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../../*/*"
-        }
-    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }
